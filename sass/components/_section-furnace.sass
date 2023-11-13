@@ -1,0 +1,29 @@
+.section-furnace
+    position: relative
+    background: linear-gradient(270deg, rgba(0, 0, 0, 0.40) 0%, rgba(0, 0, 0, 0.00) 100%), linear-gradient(90deg, rgba(0, 0, 0, 0.60) 0%, rgba(0, 0, 0, 0.00) 100%), linear-gradient(0deg, rgba(0, 0, 0, 0.15) 0%, rgba(0, 0, 0, 0.15) 100%), url(../img/Фото-задний_фон-третья_секция.png) center / cover no-repeat
+    clip-path: polygon(0 0, 100% 20%, 100% 100%, 0 80%)
+
+.furnace
+    position: relative
+    &__photo
+        width: 35%
+        box-shadow: $box-shadow
+        position: absolute
+        z-index: 0
+        transition: all .2s
+        border: .25rem solid $color-ocher
+        border-radius: 1rem
+        &_n1
+            top: 6.5rem
+            left: 0rem
+        &_n2
+            top: 18.5rem
+            left: 13rem
+        &_n3
+            top: 36rem
+            left: 4rem
+        &:hover
+            transform: scale(1.1)
+            z-index: 20
+    &:hover &__photo:not(:hover)
+        transform: scale(.95)
